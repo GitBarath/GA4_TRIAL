@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle("active");
     });
 
-    // Smooth scrolling
     window.scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Dynamic form validation on the contact page
     const contactForm = document.getElementById("contact-form");
     if (contactForm) {
         contactForm.addEventListener("submit", (event) => {
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const message = document.getElementById("message").value.trim();
             const errorBox = document.getElementById("form-errors");
 
-            // Clear previous errors
             errorBox.innerHTML = "";
 
             if (!name || !email || !message) {
@@ -40,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
             window.formName =name;
             _satellite.setVar('formName',name);
 
+            window.formEmail = email;
+            _satellite.setVar('formEmail',email);
+
+            window.formMessage = message;
+            _satellite.setVar('formMessage',message);
+
             // If validation passes
             alert("Form submitted successfully!");
             contactForm.reset();
@@ -48,13 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Email validation
     const validateEmail = (email) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     };
 
-    // Dynamic feature animation on the home page
     const features = document.querySelectorAll(".feature-item");
     if (features) {
         features.forEach((feature, index) => {
