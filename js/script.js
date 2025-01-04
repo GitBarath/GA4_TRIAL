@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 errorBox.textContent = "Please enter a valid email address.";
                 return;
             }
+            window.formName =name;
+            _satellite.setVar('formName',name);
 
             // If validation passes
             alert("Form submitted successfully!");
