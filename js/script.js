@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
             // If validation passes
             alert("Form submitted successfully!");
             contactForm.reset();
+
+            _satellite.track('formSubmit');
         });
     }
 
