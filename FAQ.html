@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOMB Website FAQ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header id="header">
+        <nav id="navbar">
+            <div id="logo">My World</div>
+            <ul id="menu">
+                <li><a id="nav-home" href="index.html" class="active">Home</a></li>
+                <li><a id="nav-about" href="about.html">About</a></li>
+                <li><a id="nav-services" href="services.html">Services</a></li>
+                <li><a id="nav-contact" href="contact.html">Contact</a></li>
+                <li><a id="nav-faq" href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section id="faq-section">
+            <h1>FAQ - The BOMB Website</h1>
+
+            <!-- FAQ Container -->
+            <div id="faq-container">
+                <!-- Default FAQ content: First 5 questions -->
+                <div id="faq-page-1">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q1: Who is behind this BOMB website?</div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A1: Our genius creator, none other than the legend himself, <strong>Obama Bin Laden</strong>. Yes, you read that right. A fusion of brilliance and mischief, designing websites that will blow your mind (pun intended). He’s the one to thank for the wild ride you're on!</p>
+                            <img src="images/3.jfif" alt="Creator Genius">
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q2: Why are we calling this website BOMB?</div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A2: Because this website is the explosion of creativity you never saw coming. Prepare for a wild ride, epic content, and just a touch of chaos. Hold onto your seats; this is no ordinary site!                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q3: What’s the deal with "Obama Bin Laden"?</div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A3: Oh, you thought this was just a quirky name? Think again. "Obama Bin Laden" is a metaphor for world domination</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q4: Can I use your website for serious stuff? </div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A4: Are you serious right now? We do serious fun, and that’s about it. If you’re looking for a place to do your taxes or watch cat videos in peace, you might want to try somewhere else. But, if you want to embrace the chaos, welcome aboard!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q5: How often do you update this bombastic website? </div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A5: Updates? We don’t just update. We detonate new features when you least expect it. And yeah! when our OBL wants it</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ content for the next 5 questions -->
+                <div id="faq-page-2" style="display: none;">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q6:  What makes your website so unique? </div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A6: Glad you asked. We are the true rebels of the web. Most websites are safe, sanitized, and boring. Not us. We take risks, mix chaos with creativity, and slap some savage style into the mix. If you want a typical, cookie-cutter site, hit the back button.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q7:  Why your website?</div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A7: This website exists to prove that creativity and chaos can coexist. Obama Bin Laden is here to disrupt the digital world and make it fun again!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q8: Is this website even for real?</div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A8: What’s "real" anyway? In a world full of boring corporate sites, we’re that wild card no one saw coming. If you think we’re joking, take a scroll. Let the page load. Let the vibe sink in. Then tell us we're not real. Spoiler: you can’t.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q9: Can I be part of the BOMB squad? </div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A9:Absolutely. If you’re ready to embrace the mayhem, contribute, and add your own flavor to the chaos, you’re one of us. Just don’t expect us to go easy on you. The BOMB squad is no place for the faint-hearted.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">Q10: How do I survive the explosion of creativity on this site?</div>
+                        <div class="faq-answer" style="display: none;">
+                            <p>A10: Easy. Buckle up, sit back, and just enjoy the ride. We’re here to disrupt, entertain, and blow your mind. So, if you can handle a world where rules don’t apply, you’ll thrive in this chaotic masterpiece we call a website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="faq-navigation">
+                <button id="prev-btn" onclick="showPreviousPage()" style="display: none;">Enough Go back</button>
+                <button id="next-btn" onclick="showNextPage()">Have more Question?</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2025 My World. All rights reserved.</p>
+    </footer>
+</body>
+</html>

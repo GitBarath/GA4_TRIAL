@@ -125,3 +125,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
     showStage(currentStep);
 });
+
+let currentPage = 1; // Keep track of the current page
+
+// Function to toggle the answer visibility when a question is clicked
+function toggleAnswer(questionElement) {
+    const faqItem = questionElement.parentElement; // Get the parent .faq-item element
+    const answer = questionElement.nextElementSibling; // Get the answer element
+    const isExpanded = faqItem.classList.contains('expanded'); // Check if expanded
+
+    // Toggle the display of the answer
+    answer.style.display = isExpanded ? 'none' : 'block';
+
+    // Toggle the expanded class on the parent .faq-item
+    faqItem.classList.toggle('expanded');
+}
+
+
+// Function to show the next page of questions
+function showNextPage() {
+    const currentPageDiv = document.querySelector(`#faq-page-${currentPage}`);
+    const nextPageDiv = document.querySelector(`#faq-page-${currentPage + 1}`);
+
+    if (nextPageDiv) {
+        currentPageDiv.style.display = 'none';
+        nextPageDiv.style.display = 'block';
+        currentPage++;
+        updateNavigationButtons();
+    }
+}
+
+// Function to show the previous page of questions
+function showPreviousPage() {
+    const currentPageDiv = document.querySelector(`#faq-page-${currentPage}`);
+    const prevPageDiv = document.querySelector(`#faq-page-${currentPage - 1}`);
+
+    if (prevPageDiv) {
+        currentPageDiv.style.display = 'none';
+        prevPageDiv.style.display = 'block';
+        currentPage--;
+        updateNavigationButtons();
+    }
+}
+
+// Function to update the visibility of navigation buttons
+function updateNavigationButtons() {
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    prevBtn.style.display = currentPage === 1 ? 'none' : 'inline-block';
+    nextBtn.style.display = document.querySelector(`#faq-page-${currentPage + 1}`) ? 'inline-block' : 'none';
+}
