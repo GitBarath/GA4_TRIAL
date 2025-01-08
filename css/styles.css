@@ -201,3 +201,75 @@ footer {
         display: block;
     }
 }
+
+/* Registration Form Styles */
+#register-section {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+#register-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-stage {
+    display: none;
+}
+
+.form-stage.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Mobile-friendly Form Styling */
+@media (max-width: 768px) {
+    #register-section {
+        padding: 20px;
+        width: 90%;
+    }
+
+    label, input, select {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
