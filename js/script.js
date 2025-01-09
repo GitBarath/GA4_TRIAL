@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle("active");
     });
 
+    window.myDataLayer = window.myDataLayer || {};
+
+    window.myDataLayer.page = {
+        pageInfo: {
+            pageName : document.title,
+            pageURL : window.location.href,
+            pagePath : window.location.pathname
+        }
+    };
+
     window.scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
