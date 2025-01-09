@@ -234,9 +234,9 @@ footer {
     text-align: center;
 }
 #next-btn,#prev-btn{
-    width: 160px;
+    width: 200px;
     background: #f39c12;
-    height: 25px;
+    height: 40px;
 }
 /* Mobile Menu */
 @media (max-width: 768px) {
